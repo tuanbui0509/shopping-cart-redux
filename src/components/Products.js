@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import Product from './Product'
+import { connect } from 'react-redux'
 
-export default class Products extends Component {
+class Products extends Component {
   render() {
+    let { products } = this.props;
     return (
       <div>
         {/* Main */}
@@ -13,9 +15,8 @@ export default class Products extends Component {
               <h1 className="section-heading">Danh Sách Sản Phẩm</h1>
               <div className="row">
                 {/* Product */}
-                <Product/>
-                <Product/>
-                <Product/>
+                {this.showProducts(products)}
+
               </div>
             </section>
           </div>
@@ -23,4 +24,23 @@ export default class Products extends Component {
       </div>
     )
   }
+  showProducts(products) {
+    let result = null;
+    if (products.length > 0) {
+      result = products.map((product, index) => {
+        console.log(product);
+        return <Product key={index} product={product} />
+      });
+    }
+    return result;
+  }
 }
+
+const mapStateToProps = state => {
+  return {
+    // producer index.js
+    products: state.products
+  }
+};
+
+export default connect(mapStateToProps, null)(Products);
