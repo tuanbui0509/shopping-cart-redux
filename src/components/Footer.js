@@ -13,42 +13,42 @@ export default class App extends Component {
                 <div className="social-section text-md-left">
                   <ul className="text-center">
                     <li>
-                      <a className="btn-floating  btn-fb waves-effect waves-light">
+                      <a href="/#" className="btn-floating  btn-fb waves-effect waves-light">
                         <i className="fa fa-facebook" />
                       </a>
                     </li>
                     <li>
-                      <a className="btn-floating  btn-ins waves-effect waves-light">
+                      <a href="/#" className="btn-floating  btn-ins waves-effect waves-light">
                         <i className="fa fa-instagram" />
                       </a>
                     </li>
                     <li>
-                      <a className="btn-floating  btn-tw waves-effect waves-light">
+                      <a href="/#" className="btn-floating  btn-tw waves-effect waves-light">
                         <i className="fa fa-twitter" />
                       </a>
                     </li>
                     <li>
-                      <a className="btn-floating  btn-yt waves-effect waves-light">
+                      <a href="/#" className="btn-floating  btn-yt waves-effect waves-light">
                         <i className="fa fa-youtube" />
                       </a>
                     </li>
                     <li>
-                      <a className="btn-floating  btn-li waves-effect waves-light">
+                      <a href="/#" className="btn-floating  btn-li waves-effect waves-light">
                         <i className="fa fa-linkedin" />
                       </a>
                     </li>
                     <li>
-                      <a className="btn-floating  btn-dribbble waves-effect waves-light">
+                      <a href="/#" className="btn-floating  btn-dribbble waves-effect waves-light">
                         <i className="fa fa-dribbble left" />
                       </a>
                     </li>
                     <li>
-                      <a className="btn-floating  btn-pin waves-effect waves-light">
+                      <a href="/#" className="btn-floating  btn-pin waves-effect waves-light">
                         <i className="fa fa-pinterest" />
                       </a>
                     </li>
                     <li>
-                      <a className="btn-floating  btn-gplus waves-effect waves-light">
+                      <a href="/#" className="btn-floating  btn-gplus waves-effect waves-light">
                         <i className="fa fa-google-plus" />
                       </a>
                     </li>
@@ -59,16 +59,16 @@ export default class App extends Component {
                 <h5 className="title">Delivery</h5>
                 <ul>
                   <li>
-                    <a>Store Delivery</a>
+                    <a href="/#">Store Delivery</a>
                   </li>
                   <li>
-                    <a>Online Delivery</a>
+                    <a href="/#">Online Delivery</a>
                   </li>
                   <li>
-                    <a>Delivery Terms &amp; Conditions</a>
+                    <a href="/#">Delivery Terms &amp; Conditions</a>
                   </li>
                   <li>
-                    <a>Tracking</a>
+                    <a href="/#">Tracking</a>
                   </li>
                 </ul>
               </div>
@@ -76,16 +76,16 @@ export default class App extends Component {
                 <h5 className="title">Need help?</h5>
                 <ul>
                   <li>
-                    <a>FAQ</a>
+                    <a href="/#">FAQ</a>
                   </li>
                   <li>
-                    <a>Contact Us</a>
+                    <a href="/#">Contact Us</a>
                   </li>
                   <li>
-                    <a>Return Policy</a>
+                    <a href="/#">Return Policy</a>
                   </li>
                   <li>
-                    <a>Product Registration</a>
+                    <a href="/#">Product Registration</a>
                   </li>
                 </ul>
               </div>
@@ -95,7 +95,7 @@ export default class App extends Component {
                   <li>
                     <div className="view overlay hm-white-slight z-depth-1">
                       <img className="img-fluid" src="http://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" alt="" />
-                      <a>
+                      <a href="/#">
                         <div className="mask waves-light waves-effect waves-light" />
                       </a>
                     </div>
@@ -103,7 +103,7 @@ export default class App extends Component {
                   <li>
                     <div className="view overlay hm-white-slight z-depth-1">
                       <img className="img-fluid" src="http://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" alt="" />
-                      <a>
+                      <a href="/#">
                         <div className="mask waves-light waves-effect waves-light" />
                       </a>
                     </div>
@@ -111,7 +111,7 @@ export default class App extends Component {
                   <li>
                     <div className="view overlay hm-white-slight z-depth-1">
                       <img className="img-fluid" src="http://mdbootstrap.com/img/Photos/Avatars/img%20(19).jpg" alt="" />
-                      <a>
+                      <a href="/#">
                         <div className="mask waves-light waves-effect waves-light" />
                       </a>
                     </div>
@@ -119,7 +119,7 @@ export default class App extends Component {
                   <li>
                     <div className="view overlay hm-white-slight z-depth-1">
                       <img className="img-fluid" src="http://mdbootstrap.com/img/Photos/Avatars/img%20(16).jpg" alt="" />
-                      <a>
+                      <a href="/#">
                         <div className="mask waves-light waves-effect waves-light" />
                       </a>
                     </div>
@@ -127,7 +127,7 @@ export default class App extends Component {
                   <li>
                     <div className="view overlay hm-white-slight z-depth-1">
                       <img className="img-fluid" src="http://mdbootstrap.com/img/Photos/Avatars/img%20(5).jpg" alt="" />
-                      <a>
+                      <a href="/#">
                         <div className="mask waves-light waves-effect waves-light" />
                       </a>
                     </div>
@@ -135,7 +135,7 @@ export default class App extends Component {
                   <li>
                     <div className="view overlay hm-white-slight z-depth-1">
                       <img className="img-fluid" src="http://mdbootstrap.com/img/Photos/Avatars/img%20(18).jpg" alt="" />
-                      <a>
+                      <a href="/#">
                         <div className="mask waves-light waves-effect waves-light" />
                       </a>
                     </div>
@@ -143,7 +143,7 @@ export default class App extends Component {
                   <li>
                     <div className="view overlay hm-white-slight z-depth-1">
                       <img className="img-fluid" src="http://mdbootstrap.com/img/Photos/Avatars/img%20(15).jpg" alt="" />
-                      <a>
+                      <a href="/#">
                         <div className="mask waves-light waves-effect waves-light" />
                       </a>
                     </div>
@@ -151,7 +151,7 @@ export default class App extends Component {
                   <li>
                     <div className="view overlay hm-white-slight z-depth-1">
                       <img className="img-fluid" src="http://mdbootstrap.com/img/Photos/Avatars/img%20(17).jpg" alt="" />
-                      <a>
+                      <a href="/#">
                         <div className="mask waves-light waves-effect waves-light" />
                       </a>
                     </div>
