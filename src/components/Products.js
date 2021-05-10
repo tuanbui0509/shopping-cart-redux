@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import Product from './Product'
-import { connect } from 'react-redux'
-
 class Products extends Component {
   render() {
+    // nhận props từ ProductsContainer
     let { products } = this.props;
     return (
       <div>
@@ -36,11 +35,4 @@ class Products extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    // producer index.js
-    products: state.products
-  }
-};
-
-export default connect(mapStateToProps, null)(Products);
+export default Products;
