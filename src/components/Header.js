@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/role-supports-aria-props */
 import React, { Component } from 'react'
 
 export default class Header extends Component {
@@ -197,7 +198,7 @@ export default class Header extends Component {
             </div>
             <ul className="nav navbar-nav nav-flex-icons ml-auto">
               <li className="nav-item dropdown">
-                <a href="/#" className="nav-link dropdown-toggle waves-effect waves-light" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a href="/#" className="nav-link dropdown-toggle waves-effect waves-light" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup='true' aria-expanded='false'>
                   <i className="fa fa-user" /> Tài Khoản</a>
                 <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
                   <a href="/#" className="dropdown-item waves-effect waves-light">Đăng Ký</a>

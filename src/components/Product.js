@@ -29,7 +29,7 @@ export default class Product extends Component {
             <div className="card-footer">
               <span className="left">{product.price}$</span>
               <span className="right">
-                <a href="/#" className="btn-floating blue-gradient" data-toggle="tooltip" data-placement="top" title data-original-title="Add to Cart">
+                <a href="/#" className="btn-floating blue-gradient" data-toggle="tooltip" data-placement="top" title='true' data-original-title="Add to Cart">
                   <i className="fa fa-shopping-cart" />
                 </a>
               </span>
@@ -44,10 +44,10 @@ export default class Product extends Component {
 
     if (rating > 0) {
       for (let i = 1; i <= rating; i++) {
-        result.push(<i className="fa fa-star" />);
+        result.push(<i key={i} className="fa fa-star" />);
       }
       for (let i = 1; i <= 5 - rating; i++) {
-        result.push(<i className="far fa-star"/>);
+        result.push(<i key={i+rating} className="far fa-star"/>);
 
       }
     }

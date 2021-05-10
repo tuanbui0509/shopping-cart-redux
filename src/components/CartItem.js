@@ -26,7 +26,7 @@ export default class CartItem extends Component {
         </td>
         <td>15$</td>
         <td>
-          <button type="button" className="btn btn-sm btn-primary waves-effect waves-light" data-toggle="tooltip" data-placement="top" title data-original-title="Remove item">
+          <button type="button" className="btn btn-sm btn-primary waves-effect waves-light" data-toggle="tooltip" data-placement="top"  title='true' data-original-title="Remove item">
             X</button>
         </td>
       </tr>

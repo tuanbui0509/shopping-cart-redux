@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
-import Product from './Product'
 class Products extends Component {
   render() {
     // nhận props từ ProductsContainer
-    let { products } = this.props;
     return (
       <div>
         {/* Main */}
@@ -14,7 +12,7 @@ class Products extends Component {
               <h1 className="section-heading">Danh Sách Sản Phẩm</h1>
               <div className="row">
                 {/* Product */}
-                {this.showProducts(products)}
+                {this.props.children}
 
               </div>
             </section>
@@ -23,16 +21,7 @@ class Products extends Component {
       </div>
     )
   }
-  showProducts(products) {
-    let result = null;
-    if (products.length > 0) {
-      result = products.map((product, index) => {
-        console.log(product);
-        return <Product key={index} product={product} />
-      });
-    }
-    return result;
-  }
+
 }
 
 export default Products;
