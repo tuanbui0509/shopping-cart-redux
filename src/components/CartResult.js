@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 export default class Cart extends Component {
   render() {
+    let {total} = this.props;
+    console.log('tong tien: '+total);
     return (
       <tr>
         <td colSpan={3} />
@@ -11,7 +13,7 @@ export default class Cart extends Component {
         </td>
         <td>
           <h4>
-            <strong>15$</strong>
+            <strong>{total}$</strong>
           </h4>
         </td>
         <td colSpan={3}>

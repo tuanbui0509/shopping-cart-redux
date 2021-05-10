@@ -3,6 +3,8 @@ import CartItem from './CartItem';
 import CartResult from './CartResult';
 export default class Cart extends Component {
   render() {
+    let { children } = this.props;
+    console.log(children);
     return (
       <div>
         {/* Cart */}
@@ -20,11 +22,9 @@ export default class Cart extends Component {
                 </tr>
               </thead>
               <tbody>
-                <CartItem/>
-                <CartItem/>
-                <CartItem/>
-                <CartResult/>
-                </tbody>
+              {children}
+                {/* <CartResult /> */}
+              </tbody>
             </table>
           </div>
         </section>

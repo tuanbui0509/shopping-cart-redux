@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Message from './components/Message';
 import Cart from './components/Cart';
 import ProductsContainer from './containers/ProductsContainer';
+import CartContainer from './containers/CartContainer';
 export default class App extends Component {
   render() {
     return (
@@ -19,7 +20,7 @@ export default class App extends Component {
             {/* Message */}
             <Message />
             {/* Cart */}
-            <Cart />
+            <CartContainer />
           </div>
         </main>
         {/* Footer */}

@@ -13,16 +13,16 @@ class ProductsContainer extends Component {
     showProducts(products) {
         let result = null;
         if (products.length > 0) {
-          result = products.map((product, index) => {
-            return <Product key={index} product={product} />
-          });
+            result = products.map((product, index) => {
+                return <Product key={index} product={product} />
+            });
         }
         return result;
-      } 
+    }
 
 }
 
-ProductsContainer.propTypes={
+ProductsContainer.propTypes = {
     products: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.number.isRequired,
@@ -38,7 +38,7 @@ ProductsContainer.propTypes={
 
 const mapStateToProps = state => {
     return {
-        // producer index.js
+        // reducer index.js
         products: state.products
     }
 };
