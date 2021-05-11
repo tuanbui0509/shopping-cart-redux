@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import *as Message from './../constants/Message'
 export default class Product extends Component {
   render() {
     let { product } = this.props;
@@ -18,9 +19,9 @@ export default class Product extends Component {
               </strong>
             </h4>
             <ul className="rating">
-            <li>
-              {this.showRating(product.rating)}
-            </li>
+              <li>
+                {this.showRating(product.rating)}
+              </li>
 
             </ul>
             <p className="card-text">
@@ -29,7 +30,15 @@ export default class Product extends Component {
             <div className="card-footer">
               <span className="left">{product.price}$</span>
               <span className="right">
-                <a href="/#" className="btn-floating blue-gradient" data-toggle="tooltip" data-placement="top" title='true' data-original-title="Add to Cart">
+                <a 
+                  // href="!#"
+                  className="btn-floating blue-gradient"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title='true'
+                  data-original-title="Add to Cart"
+                  onClick={() => this.onAddToCart(product)}
+                >
                   <i className="fa fa-shopping-cart" />
                 </a>
               </span>
@@ -39,6 +48,11 @@ export default class Product extends Component {
       </div>
     )
   }
+
+  onAddToCart = (product) => {
+    this.props.onAddToCart(product);
+    this.props.onChangeMessage(Message.MSG_ADD_TO_CART_SUCCESS);
+  }
   showRating(rating) {
     let result = [];
 
@@ -47,7 +61,7 @@ export default class Product extends Component {
         result.push(<i key={i} className="fa fa-star" />);
       }
       for (let i = 1; i <= 5 - rating; i++) {
-        result.push(<i key={i+rating} className="far fa-star"/>);
+        result.push(<i key={i + rating} className="far fa-star" />);
 
       }
     }

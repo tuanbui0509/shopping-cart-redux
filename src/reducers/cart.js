@@ -1,40 +1,46 @@
 import *as types from './../constants/ActionType'
 let data = JSON.parse(localStorage.getItem('CART'));
-let initialState = [
-    {
-        product: {
-            id: 1,
-            name: 'Apple iPhone 12 Pro Max 512Gb VN/A',
-            image: 'https://stcv4.hnammobile.com/uploads/products/colors/7/apple-iphone-12-pro-max-1-sim-128gb-01602658120.jpg',
-            description: 'Sản phẩm của apple',
-            price: 500,
-            inventory: 100,
-            rating: 4
-        },
-        quantity: 5
-    },
-    {
-        product:{
-            id: 3,
-            name: 'Xiaomi Redmi Note 10 Pro 128GB Ram 8GB',
-            image: 'https://cdn.mobilecity.vn/mobilecity-vn/images/2020/08/redmi-mi10-ultra-white.jpg',
-            description: 'Sản phẩm của Xiaomi Redmi Note 10 Pro China',
-            price: 700,
-            inventory: 200,
-            rating: 5
-        },
-        quantity: 4
-    }
-]
-//  data ? data : [];
+let initialState = data ? data : [];
 const cart = (state = initialState, action) => {
+    let { product, quantity } = action;
+    let index;
     switch (action.type) {
         case types.ADD_TO_CART:
-            console.log(action)
+            index = findProductInCart(state, product);
+            if (index !== -1) {
+                state[index].quantity++;
+            }
+            else {
+                state.push({
+                    product,
+                    quantity: quantity
+                })
+            }
+            localStorage.setItem('CART', JSON.stringify(state));
+            return [...state];
+        case types.DELETE_PRODUCT_IN_CART:
+            index = findProductInCart(state, product);
+            if (index !== -1) {
+                state[index].quantity++;
+                state.splice(index, 1);
+            }
+            localStorage.setItem('CART', JSON.stringify(state));
             return [...state];
         default:
             return [...state];
     }
+}
+
+let findProductInCart = (cart, product) => {
+    let result = -1;
+    if (cart.length > 0) {
+        for (let i = 0; i < cart.length; i++) {
+            if (cart[i].product.id === product.id) {
+                result = i; break;
+            }
+        }
+    }
+    return result;
 }
 
 export default cart;

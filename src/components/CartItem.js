@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-
+import *as Message from './../constants/Message'
 export default class CartItem extends Component {
   render() {
-    let {item} = this.props;
-    console.log(item);
+    let { item } = this.props;
     return (
       <tr>
         <th scope="row">
@@ -26,12 +25,22 @@ export default class CartItem extends Component {
             </label>
           </div>
         </td>
-        <td>{item.quantity*item.product.price}$</td>
+        <td>{item.quantity * item.product.price}$</td>
         <td>
-          <button type="button" className="btn btn-sm btn-primary waves-effect waves-light" data-toggle="tooltip" data-placement="top"  title='true' data-original-title="Remove item">
+          <button type="button" className="btn btn-sm btn-primary waves-effect waves-light"
+            data-toggle="tooltip" data-placement="top" title='true' data-original-title="Remove item"
+            onClick={() => this.onDelete(item.product)}
+          >
             X</button>
         </td>
       </tr>
     )
   }
+
+  onDelete = (product) => {
+    let {onDeleteInCart, onChangeMessage}=this.props;
+    onDeleteInCart(product);
+    onChangeMessage(Message.MSG_DELETE_TO_CART_SUCCESS);
+  }
+
 }
