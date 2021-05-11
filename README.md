@@ -1,7 +1,7 @@
 # Getting Started with Create React App
 
-## Path http://tuanbui0509-cart-redux.surge.sh/
-
+## Path Surge: http://tuanbui0509-cart-redux.surge.sh/
+## Path Heroku: https://tuanbui0509-cart-redux.herokuapp.com/
 - App 
 -    Header 1
 -    Products 2
